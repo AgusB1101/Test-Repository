@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head") %>
+  <body>
+    <%- include("partials/header") %>
+    <main>
+        <% data.forEach(element => { %>
+            <article>
+        <h3><%= element.id %></h3>
+        <h2><%= element.title %></h2>
+        <h5>$<%= element.price %></h5>
+        <p><%= element.description %></p>
+        <h5>Categoria: <%= element.category %></h5>
+        <img src=<%= element.image %> alt="">
+        <p>Calificación: <%= element.rating.rate %> </p>
+        <p>Cantidad de Opiniones: <%= element.rating.count %> </p>
+    </article>
+
+        <% }) %>
+
+    </main>
+    <%- include("partials/footer") %>
+  </body>
+</html>

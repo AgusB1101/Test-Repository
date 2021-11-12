@@ -2,7 +2,20 @@
 <html lang="en">
   <%- include('../partials/head') %>
   <body>
-    <%- include('../partials/input', {searchBar: true, placeholder: "Buscar" })
-    %>
+    <%- include('../partials/header', {showBar: true}) %>
+    <main class="mainHome">
+      <%- include("../partials/categoriesMenu.ejs") %> <%-
+      include("../partials/productHeroGroup.ejs", { heros }) %>
+      <div class="homeProduxBox">
+        <%- include("../partials/productGroup.ejs", { productos: teinteresan,
+        title:"Te puede interesar"}) %>
+      </div>
+      <div class="homeProduxBox">
+        <%- include("../partials/productGroup.ejs", { productos: lomaspedido,
+        title:"Lo mas pedido"}) %>
+      </div>
+      <%- include("../partials/categoriesMenu.ejs") %>
+    </main>
+    <%- include("../partials/footer") %>
   </body>
 </html>

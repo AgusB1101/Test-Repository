@@ -24,7 +24,7 @@ a {
 
 html {
   font-size: 10px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
 }
 
@@ -66,6 +66,10 @@ h3 {
 }
 body {
   background-color: #efefef;
+}
+
+.rojo {
+  color: var(--rojo);
 }
 
 .mainHome {
@@ -195,7 +199,7 @@ body {
 }
 
 .containerProductHero::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -267,7 +271,7 @@ body {
 }
 
 .productHeroGroup::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100vw;
@@ -457,7 +461,7 @@ button,
 .btn-lr,
 .btn-agregar,
 .btn-home {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   width: auto;
   height: 3.2rem;
   background: rgba(73, 79, 81, 1);
@@ -638,7 +642,7 @@ input {
   height: 3.2rem;
   border-radius: 1.6rem;
   color: var(--gris);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: rgba(255, 255, 255, 1);
   border: 0.1rem solid var(--gris);
   padding: 0.8rem 1.6rem;
@@ -922,6 +926,11 @@ input:focus {
   justify-content: center;
   padding: 48px 32px;
   box-shadow: 0px 5px 5px 0px #888888;
+}
+
+.error-register {
+  color: var(--rojo);
+  font-size: 1rem;
 }
 
 .texto-register {

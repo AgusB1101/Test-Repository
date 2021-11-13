@@ -1,5 +1,6 @@
 const express = require("express");
 const mainController = require("../controllers/mainController");
+const validateRegisterForm = require("../middlewares/validateRegisterForm");
 const router = express.Router();
 
 router.get("/product/:id", (req, res) => {
@@ -13,6 +14,7 @@ router.get("/checkout", mainController.getCheckout);
 router.get("/contact", mainController.getContact);
 router.get("/login", mainController.getLogin);
 router.get("/register", mainController.getRegister);
+router.post("/register", validateRegisterForm, mainController.postRegister);
 router.get("/", mainController.getIndex);
 router.get("*", mainController.getNotFound);
 

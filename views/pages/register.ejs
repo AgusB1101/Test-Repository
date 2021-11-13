@@ -8,10 +8,33 @@
             <div class="red"></div>
             <div class="register">
                 <h1>¡Registrate!</h1>
-                <form class="form-register" action="/">
-                    <input  class="register-input" type="text" name="usuario" placeholder="Tu nombre"></input>
-                    <input  class="register-input" type="email" name="email" placeholder="Tu email"></input>
-                    <input  class="register-input" type="password" name="password" placeholder="Tu contraseña"></input>
+
+                <form class="form-register" action="/register" method="post">
+
+                    <% if (locals.errors) {
+                        const userError = locals.errors.find(e => e.param == "usuario")
+                        %>
+                        <p class="error-register"><%= userError ? userError.msg : "" %></p> 
+                    <% } %>
+                    <input class="register-input" type="text" id="usuario" name="usuario" placeholder="Tu nombre" value= "<%= locals.old && old.usuario ? old.usuario : "" %>"></input>
+                    
+                    <% if (locals.errors) {
+                        const emailError = locals.errors.find(e => e.param == "email")
+                        %>
+                        <p class="error-register"><%= emailError ? emailError.msg : "" %></p> 
+                    <% } %>
+                    <input class="register-input" type="email" id="email" name="email"  placeholder="Tu email" value= "<%= locals.old && old.email ? old.email : "" %>"></input>
+                    
+                    <% if (locals.errors) {
+                        const pwdError = locals.errors.find(e => e.param == "password")
+                        %>
+                        <p class="error-register"><%= pwdError ? pwdError.msg : "" %></p> 
+                    <% } %>
+                    <input  class="register-input" type="password" id="password" name="password" placeholder="Tu contraseña"></input>
+                    
+                    <% if (locals.mensajeRegistro) { %>
+                     <p class="texto-register rojo"><%= mensajeRegistro %> </p>
+                    <% } %>
                     <button class="register-button" type="submit">Crear cuenta</button>
                 </form>
             </div>

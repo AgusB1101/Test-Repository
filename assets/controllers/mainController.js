@@ -2,6 +2,8 @@ const fs = require("fs");
 const bcrypt = require("bcrypt");
 const { heroes, productos } = require("../../productos");
 const { validationResult } = require("express-validator");
+const Cart = require("../models/Cart");
+const Product = require("../models/Product");
 
 let getUsers = () => JSON.parse(fs.readFileSync(__dirname + "/users.json"));
 const writeUser = (users) =>
@@ -67,6 +69,9 @@ const controller = {
   },
 
   getIndex: (_, res) => {
+    Cart.showCart();
+    Cart.addToCart("agus@asd.com", "6191cb5ec654f145d4326b85");
+    Cart.showCart();
     res.render("pages/index", {
       teinteresan: productos.slice(0, 4),
       lomaspedido: productos,

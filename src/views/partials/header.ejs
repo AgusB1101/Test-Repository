@@ -1,0 +1,16 @@
+<header class="header flex-center-between">
+  <a href="/">
+    <img class="logo" src="/svg/santanderLogo.svg" alt="Logo de Santander" />
+  </a>
+
+  <div class="flex-center-between account-container">
+  <% if (showBar) { 
+    const placeholder = "Buscar productos..."%>
+    <%-include("atoms/searchBar", { placeholder }) %>
+    <%- include("atoms/button", {type: "cart"}) %>
+    <%-include("atoms/button", {type: "profile", name: "Olivia", image: "img/profile-pic.png"}) %>
+    <a class="button" href="">Login</a>
+    <a class="button" href="">Registrarse</a>
+  <% } %>
+  </div>
+</header>

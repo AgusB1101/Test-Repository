@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include("../partials/head") %>
+  <%- include("../partials/head", {title: "Login"}) %>
   <body class="body">
     <div>
       <%- include("../partials/header", {showBar: false}) %>
@@ -10,9 +10,9 @@
           <h2 class="h2">¡Hola!</h2>
           <input
             class="input"
-            type="text"
+            type="email"
             name="user"
-            placeholder="Tu nombre de usuario"
+            placeholder="Tu email"
           />
           <input
             class="input"

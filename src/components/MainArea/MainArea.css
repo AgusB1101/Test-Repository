@@ -1,0 +1,5 @@
+.mainArea {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 29.6rem);
+}

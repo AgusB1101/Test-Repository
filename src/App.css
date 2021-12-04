@@ -136,5 +136,5 @@ html {
 .app {
   display: flex;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
 }

@@ -1,4 +1,4 @@
-import { Router, Routes } from 'react-router'
+import { Route, Routes } from 'react-router'
 import Home from '../../pages/Home/Home'
 import ProductNew from '../../pages/Products/ProductNew/ProductNew'
 import ProductsList from '../../pages/Products/ProductsList/ProductsList'
@@ -13,14 +13,14 @@ const MainArea = () => {
   return (
     <div className="mainArea">
       <Routes>
-        <Router path="/" element={<Home />} />
-        <Router path="/products" element={<ProductsList />} />
-        <Router path="/products/:id" element={<ProductView />} />
-        <Router path="/products/new" element={<ProductNew />} />
-        <Router path="/stores" element={<StoresList />} />
-        <Router path="/stores/:id" element={<StoreView />} />
-        <Router path="/stores/new" element={<StoreNew />} />
-        <Router path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductsList />} />
+        <Route path="/products/:id" element={<ProductView />} />
+        <Route path="/products/new" element={<ProductNew />} />
+        <Route path="/stores" element={<StoresList />} />
+        <Route path="/stores/:id" element={<StoreView />} />
+        <Route path="/stores/new" element={<StoreNew />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )

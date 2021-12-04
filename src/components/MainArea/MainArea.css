@@ -1,5 +1,11 @@
 .mainArea {
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 29.6rem);
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .mainArea {
+    width: calc(100% - 29.6rem);
+  }
 }

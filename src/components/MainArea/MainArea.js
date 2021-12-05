@@ -8,12 +8,13 @@ import StoresList from '../../pages/Stores/StoresList/StoresList'
 import StoreView from '../../pages/Stores/StoreView/StoreView'
 import NotFound from '../../pages/NotFound/NotFound'
 import './MainArea.css'
+import React from 'react'
 
-const MainArea = () => {
+const MainArea = React.forwardRef(({ handleMenu }, ref) => {
   return (
-    <div className="mainArea">
+    <div className="mainArea" ref={ref}>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home handleMenu={handleMenu} />} />
         <Route path="/products" element={<ProductsList />} />
         <Route path="/products/:id" element={<ProductView />} />
         <Route path="/products/new" element={<ProductNew />} />
@@ -24,6 +25,6 @@ const MainArea = () => {
       </Routes>
     </div>
   )
-}
+})
 
 export default MainArea

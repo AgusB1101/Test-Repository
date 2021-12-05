@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 7.2rem;
+  padding: 1.5rem;
+}
+
+.menu {
+  width: 3rem;
+  cursor: pointer;
+  display: block;
+}
+
+@media (min-width: 1025px) {
+  .menu {
+    display: none;
+  }
+}

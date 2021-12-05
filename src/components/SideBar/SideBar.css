@@ -3,11 +3,20 @@
   backdrop-filter: blur(0.5rem);
   width: 29.6rem;
   min-height: 100%;
-  display: none;
+  transform: translateX(-100%);
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 3;
+  padding: 2rem;
+  outline: none;
 }
 
 @media (min-width: 1025px) {
   .sideBar {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(0);
+    position: initial;
   }
 }

@@ -6,7 +6,7 @@ const Home = ({ handleMenu }) => {
   return (
     <>
       <Header handleMenu={handleMenu} title="¡Hola Olivia!" />
-      <Content>Este es un contenido</Content>
+      <Content>This is a content</Content>
     </>
   )
 }

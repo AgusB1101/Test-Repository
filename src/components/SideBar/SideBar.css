@@ -1,5 +1,5 @@
 .sideBar {
-  background-color: rgba(256, 256, 256, 0.5);
+  background-color: var(--sideBarMobile);
   backdrop-filter: blur(0.5rem);
   width: 29.6rem;
   min-height: 100%;
@@ -9,13 +9,30 @@
   z-index: 3;
   padding: 2rem;
   outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sideBarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logo {
+  width: 24rem;
+}
+
+.logoAndSideBarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 @media (min-width: 1025px) {
   .sideBar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: var(--sideBarDesktop);
     transform: translateX(0);
     position: initial;
   }

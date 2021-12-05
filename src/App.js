@@ -22,7 +22,7 @@ function App() {
         sideBar.current.classList.remove('sideBarClose')
         sideBar.current.classList.remove('sideBarOpen')
         mainArea.current.style.pointerEvents = 'initial'
-      }, 200)
+      }, 400)
     }
   }
 

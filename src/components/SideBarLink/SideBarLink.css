@@ -1,0 +1,18 @@
+.sideBarLink {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  color: var(--letter);
+  transition: 300ms background-color;
+}
+
+.sideBarLink:hover {
+  background-color: var(--primary);
+}
+
+.iconLink {
+  filter: var(--svg);
+  width: 2.4rem;
+}

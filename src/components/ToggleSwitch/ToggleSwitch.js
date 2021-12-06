@@ -17,6 +17,11 @@ const ToggleSwitch = () => {
   }
 
   useEffect(() => {
+    handleSwitch()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
     if (checked) toggleSwitch.current.checked = true
     document
       .querySelector('html')

@@ -3,4 +3,7 @@
   padding: 1.5rem;
   padding-top: 7.2rem;
   color: var(--letter);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

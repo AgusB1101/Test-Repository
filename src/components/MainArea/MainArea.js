@@ -39,7 +39,7 @@ const MainArea = React.forwardRef(({ handleMenu }, ref) => {
           path="/stores/new"
           element={<StoreNew handleMenu={handleMenu} />}
         />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound handleMenu={handleMenu} />} />
       </Routes>
     </div>
   )

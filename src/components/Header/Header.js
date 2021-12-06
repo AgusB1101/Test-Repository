@@ -9,9 +9,13 @@ const Header = ({ handleMenu, title, afterChevron }) => {
         alt="Menu"
         onClick={handleMenu}
       />
-      <h1>{title}</h1>
-      {afterChevron ? <img src="/assets/chevron.svg" alt="Chevron" /> : ''}
-      <h1>{afterChevron}</h1>
+      <h2>{title}</h2>
+      {afterChevron ? (
+        <img 
+        className="chevron"
+        src="/assets/chevron.svg"
+        alt="Chevron" />) : ('')}
+      <h2>{afterChevron}</h2>
     </header>
   )
 }

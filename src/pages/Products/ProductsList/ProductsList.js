@@ -1,7 +1,12 @@
+import Header from '../../../components/Header/Header'
 import './ProductsList.css'
 
-const ProductsList = () => {
-  return <div></div>
+const ProductsList = ({ handleMenu }) => {
+  return (
+    <>
+      <Header handleMenu={handleMenu} title="Productos" />
+    </>
+  )
 }
 
 export default ProductsList

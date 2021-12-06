@@ -7,7 +7,7 @@
   overflow-x: hidden;
   position: fixed;
   z-index: 3;
-  padding: 2rem;
+  padding: 1.5rem;
   outline: none;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,20 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+.switchAndButtonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.changeTheme {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  gap: 1.5rem;
+  color: var(--letter);
 }
 
 @media (min-width: 1025px) {

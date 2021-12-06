@@ -17,6 +17,11 @@
   filter: var(--svg);
 }
 
+.chevron {
+  width: 3rem;
+  filter: var(--svg);
+}
+
 @media (min-width: 1025px) {
   .menu {
     display: none;

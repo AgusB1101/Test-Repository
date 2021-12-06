@@ -8,6 +8,7 @@
   transition: 300ms background-color;
 }
 
+.sideBarLinkSelected,
 .sideBarLink:hover {
   background-color: var(--primary);
 }

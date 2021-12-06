@@ -4,7 +4,7 @@
   background: var(--btn);
   border-radius: 1.6rem;
   padding: 0.8rem 1.6rem;
-  color: var(--letter);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;

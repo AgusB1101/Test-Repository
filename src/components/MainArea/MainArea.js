@@ -15,12 +15,30 @@ const MainArea = React.forwardRef(({ handleMenu }, ref) => {
     <div className="mainArea" ref={ref}>
       <Routes>
         <Route path="/" element={<Home handleMenu={handleMenu} />} />
-        <Route path="/products" element={<ProductsList />} />
-        <Route path="/products/:id" element={<ProductView />} />
-        <Route path="/products/new" element={<ProductNew />} />
-        <Route path="/stores" element={<StoresList />} />
-        <Route path="/stores/:id" element={<StoreView />} />
-        <Route path="/stores/new" element={<StoreNew />} />
+        <Route
+          path="/products"
+          element={<ProductsList handleMenu={handleMenu} />}
+        />
+        <Route
+          path="/products/:id"
+          element={<ProductView handleMenu={handleMenu} />}
+        />
+        <Route
+          path="/products/new"
+          element={<ProductNew handleMenu={handleMenu} />}
+        />
+        <Route
+          path="/stores"
+          element={<StoresList handleMenu={handleMenu} />}
+        />
+        <Route
+          path="/stores/:id"
+          element={<StoreView handleMenu={handleMenu} />}
+        />
+        <Route
+          path="/stores/new"
+          element={<StoreNew handleMenu={handleMenu} />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

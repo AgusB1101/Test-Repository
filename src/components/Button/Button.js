@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import './Button.css'
 
-const Button = ({ to, centered, children }) => {
+const Button = ({ to, centered, children, addClass = '' }) => {
   return (
     <Link to={to}>
-      <button type="button" className="btn">
-        <span className={'btnContent ' + (centered && 'centerContent')}>
+      <button type="button" className={'btn ' + addClass}>
+        <span className={'btnContent ' + (centered ? 'centerContent' : '')}>
           {children}
         </span>
       </button>

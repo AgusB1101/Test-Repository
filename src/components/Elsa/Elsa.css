@@ -1,7 +1,8 @@
 .elsaContainer {
   align-self: center;
   position: relative;
-  bottom: 7.2rem;
+  top: calc(50% - 14rem - 7.2rem);
+  height: 28rem;
 }
 
 .elsaImg {

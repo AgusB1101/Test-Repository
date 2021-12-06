@@ -1,0 +1,31 @@
+.homeBox {
+  width: 100%;
+  height: 6rem;
+  background-color: var(--box);
+  border-radius: 1rem;
+  color: var(--letter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logoAndQtyContainer {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.homeBoxImg {
+  width: 4rem;
+  filter: var(--svg);
+}
+
+.buttonPrefixWidth {
+  width: 15rem;
+}
+
+.homeBoxButtons {
+  display: flex;
+  gap: 1.5rem;
+}

@@ -42,6 +42,7 @@
   font-size: 1.6rem;
   gap: 1.5rem;
   color: var(--letter);
+  font-weight: 400;
 }
 
 @media (min-width: 1025px) {

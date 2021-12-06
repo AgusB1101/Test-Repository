@@ -9,16 +9,23 @@ const ToggleSwitch = () => {
   const handleSwitch = () => {
     if (!checked) {
       localStorage.setItem('theme', 'dark')
+      toggleSwitch.current.checked = true
       setChecked(true)
     } else {
       localStorage.setItem('theme', 'light')
+      toggleSwitch.current.checked = false
       setChecked(false)
     }
   }
 
   useEffect(() => {
-    handleSwitch()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (!localStorage.getItem('theme')) {
+      toggleSwitch.current.checked = true
+      localStorage.setItem('theme', 'dark')
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+      toggleSwitch.current.checked = true
+    }
   }, [])
 
   useEffect(() => {

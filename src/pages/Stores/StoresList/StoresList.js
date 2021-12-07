@@ -4,7 +4,7 @@ import './StoresList.css'
 const StoresList = ({ handleMenu }) => {
   return (
     <>
-      <Header handleMenu={handleMenu} title="Tiendas" />
+      <Header handleMenu={handleMenu} title="Tiendas" addBtn />
     </>
   )
 }

@@ -1,6 +1,7 @@
+import Button from '../Button/Button'
 import './Header.css'
 
-const Header = ({ handleMenu, title, afterChevron, deleteBtn = false }) => {
+const Header = ({ handleMenu, title, afterChevron, deleteBtn, addBtn }) => {
   const handleDelete = () => {}
 
   return (
@@ -20,6 +21,12 @@ const Header = ({ handleMenu, title, afterChevron, deleteBtn = false }) => {
         )}
         <h2>{afterChevron}</h2>
       </div>
+
+      {addBtn && (
+        <Button to={window.location.pathname + '/new'} centered>
+          Agregar {title.slice(0, title.length - 1)}{' '}
+        </Button>
+      )}
 
       {deleteBtn && (
         <span className="deleteBtnContainer">

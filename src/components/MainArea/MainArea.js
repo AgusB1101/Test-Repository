@@ -7,17 +7,33 @@ import StoreNew from '../../pages/Stores/StoreNew/StoreNew'
 import StoresList from '../../pages/Stores/StoresList/StoresList'
 import StoreView from '../../pages/Stores/StoreView/StoreView'
 import NotFound from '../../pages/NotFound/NotFound'
+import myApi from '../../utils/API_Requests'
+import { trackPromise } from 'react-promise-tracker'
+import { useEffect, useState } from 'react'
 import './MainArea.css'
 import React from 'react'
 
 const MainArea = React.forwardRef(({ handleMenu }, ref) => {
+  const [products, setProducts] = useState([])
+  const [stores, setStores] = useState([])
+
+  useEffect(() => {
+    trackPromise(myApi.get('products').then(({ data }) => setProducts(data)))
+    trackPromise(myApi.get('stores').then(({ data }) => setStores(data)))
+  }, [])
+
   return (
-    <div className="mainArea" ref={ref}>
+    <main className="mainArea" ref={ref}>
       <Routes>
-        <Route path="/" element={<Home handleMenu={handleMenu} />} />
+        <Route
+          path="/"
+          element={
+            <Home handleMenu={handleMenu} products={products} stores={stores} />
+          }
+        />
         <Route
           path="/products"
-          element={<ProductsList handleMenu={handleMenu} />}
+          element={<ProductsList handleMenu={handleMenu} products={products} />}
         />
         <Route
           path="/products/:id"
@@ -41,7 +57,7 @@ const MainArea = React.forwardRef(({ handleMenu }, ref) => {
         />
         <Route path="*" element={<NotFound handleMenu={handleMenu} />} />
       </Routes>
-    </div>
+    </main>
   )
 })
 

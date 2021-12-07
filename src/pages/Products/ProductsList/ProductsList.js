@@ -1,11 +1,25 @@
+import Content from '../../../components/Content/Content'
 import Header from '../../../components/Header/Header'
+import ItemBox from '../../../components/ItemBox/ItemBox'
+import Loader from '../../../components/Loader/Loader'
 import './ProductsList.css'
 
-const ProductsList = ({ handleMenu }) => {
+const ProductsList = ({ handleMenu, products }) => {
   return (
-    <>
-      <Header handleMenu={handleMenu} title="Productos" />
-    </>
+    <Loader>
+      <Header handleMenu={handleMenu} title="Productos" addBtn />
+      <Content>
+        {products.map((product) => (
+          <ItemBox
+            key={product._id}
+            img={product.image}
+            title={product.title}
+            id={product._id}
+            altImg="/assets/package.svg"
+          />
+        ))}
+      </Content>
+    </Loader>
   )
 }
 

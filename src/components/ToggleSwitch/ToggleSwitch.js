@@ -19,13 +19,15 @@ const ToggleSwitch = () => {
   }
 
   useEffect(() => {
+    const isDark = localStorage.getItem('theme') === 'dark'
     if (!localStorage.getItem('theme')) {
       toggleSwitch.current.checked = true
       localStorage.setItem('theme', 'dark')
     }
-    if (localStorage.getItem('theme') === 'dark') {
+    if (isDark) {
       toggleSwitch.current.checked = true
     }
+    setChecked(true)
   }, [])
 
   useEffect(() => {

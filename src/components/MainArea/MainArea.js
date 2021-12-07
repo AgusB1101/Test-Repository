@@ -45,7 +45,7 @@ const MainArea = React.forwardRef(({ handleMenu }, ref) => {
         />
         <Route
           path="/stores"
-          element={<StoresList handleMenu={handleMenu} />}
+          element={<StoresList handleMenu={handleMenu} stores={stores} />}
         />
         <Route
           path="/stores/:id"

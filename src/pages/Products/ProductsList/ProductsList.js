@@ -9,7 +9,7 @@ const ProductsList = ({ handleMenu, products }) => {
     <Loader>
       <Header handleMenu={handleMenu} title="Productos" addBtn />
       <Content>
-        {products.map((product) => (
+        {products?.map((product) => (
           <ItemBox
             key={product._id}
             img={product.image}

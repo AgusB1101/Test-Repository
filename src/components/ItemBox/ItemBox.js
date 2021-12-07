@@ -8,7 +8,12 @@ const ItemBox = ({ title, img, id, altImg }) => {
   return (
     <div className="itemBox">
       <div className="itemBoxInfo">
-        <img src={img} alt={id} className="itemBoxImg" onError={setAltImg} />
+        <img
+          src={img ?? ''}
+          alt={id}
+          className="itemBoxImg"
+          onError={setAltImg}
+        />
         <div className="itemBoxTitleId">
           <span className="itemBoxTitle">{title}</span>
           <span className="itemBoxId">{'#' + id}</span>

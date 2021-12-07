@@ -4,7 +4,7 @@ html {
   --btn: #494f51;
   --sideBarDesktop: black;
   --sideBarMobile: #00000080;
-  --box: rgb(245, 245, 245, 0.05);
+  --box: #302f2f;
   --svg: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
     contrast(103%);
 }
@@ -14,7 +14,7 @@ html[theme='light'] {
   --letter: black;
   --sideBarDesktop: white;
   --sideBarMobile: #ffffff80;
-  --box: #e1e1e1;
+  --box: white;
   --svg: none;
 }
 

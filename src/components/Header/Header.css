@@ -1,13 +1,19 @@
 .header {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  justify-content: space-between;
   height: 7.2rem;
-  width: 100%;
+  width: calc(100vw - 29.6rem);
   padding: 1.5rem;
   color: var(--letter);
   background-color: var(--primary);
   position: fixed;
+}
+
+.haederTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .menu {

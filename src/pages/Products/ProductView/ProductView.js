@@ -9,7 +9,6 @@ const ProductView = ({ handleMenu }) => {
       <Header
         handleMenu={handleMenu}
         title="Productos"
-        backTo="/products"
         afterChevron={'#' + id}
         deleteBtn
       />

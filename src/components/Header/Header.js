@@ -11,7 +11,6 @@ const Header = ({
   afterChevron,
   deleteBtn,
   addBtn,
-  backTo,
   searchBar,
 }) => {
   const location = useLocation()

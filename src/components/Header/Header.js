@@ -1,7 +1,15 @@
+import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 import './Header.css'
 
-const Header = ({ handleMenu, title, afterChevron, deleteBtn, addBtn }) => {
+const Header = ({
+  handleMenu,
+  title,
+  afterChevron,
+  deleteBtn,
+  addBtn,
+  backTo,
+}) => {
   const handleDelete = () => {}
 
   return (
@@ -13,7 +21,13 @@ const Header = ({ handleMenu, title, afterChevron, deleteBtn, addBtn }) => {
           alt="Menu"
           onClick={handleMenu}
         />
-        <h2>{title}</h2>
+        {backTo ? (
+          <Link to={backTo}>
+            <h2>{title}</h2>
+          </Link>
+        ) : (
+          <h2>{title}</h2>
+        )}
         {afterChevron ? (
           <img className="chevron" src="/assets/chevron.svg" alt="Chevron" />
         ) : (

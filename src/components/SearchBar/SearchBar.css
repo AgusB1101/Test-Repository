@@ -16,6 +16,7 @@
   outline: none;
   border: none;
   color: var(--letter);
+  display: block;
 }
 
 .searchBarInput::placeholder {
@@ -27,4 +28,16 @@
   width: 2rem;
   filter: var(--svg);
   cursor: pointer;
+}
+
+.roundInput {
+  border-radius: 5rem;
+  width: 3.2rem;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .searchBarInput {
+    display: none;
+  }
 }

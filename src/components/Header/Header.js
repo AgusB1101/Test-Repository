@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import useWindowSize from '../../hooks/useWindowSize'
 import Button from '../Button/Button'
 import SearchBar from '../SearchBar/SearchBar'
 import './Header.css'
@@ -14,6 +15,7 @@ const Header = ({
   searchBar,
 }) => {
   const location = useLocation()
+  const [width] = useWindowSize()
 
   const [scrollHeight, setScrollHeight] = useState(0)
   const [windowHeight, setWindowHeight] = useState(0)
@@ -37,13 +39,15 @@ const Header = ({
           alt="Menu"
           onClick={handleMenu}
         />
-        {backTo ? (
-          <Link to={backTo}>
-            <h2>{title}</h2>
-          </Link>
-        ) : (
+        <Link
+          className="headerTitle"
+          to={
+            '/' +
+            location.pathname.slice(1, location.pathname.length).split('/')[0]
+          }
+        >
           <h2>{title}</h2>
-        )}
+        </Link>
         {afterChevron ? (
           <img className="chevron" src="/assets/chevron.svg" alt="Chevron" />
         ) : (
@@ -54,12 +58,23 @@ const Header = ({
 
       <div className={'rightHeader ' + (hasScrollBar ? 'hasScrollBar' : '')}>
         {searchBar && (
-          <SearchBar placeholder={`Buscar ${title.toLowerCase()}`} />
+          <SearchBar
+            placeholder={`Buscar ${title.toLowerCase()}`}
+            addClass={width <= 1024 && 'roundInput'}
+          />
         )}
 
         {addBtn && (
-          <Button to={window.location.pathname + '/new'} centered>
-            Agregar {title.slice(0, title.length - 1)}{' '}
+          <Button
+            to={window.location.pathname + '/new'}
+            centered
+            addClass={width <= 1024 && 'roundBtn'}
+          >
+            {width <= 1024 ? (
+              <img src="assets/plus.svg" alt="Add" className="plusIcon" />
+            ) : (
+              'Agregar ' + title.slice(0, title.length - 1)
+            )}
           </Button>
         )}
 

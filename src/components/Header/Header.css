@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   height: 7.2rem;
-  width: calc(100vw - 29.6rem);
+  width: 100vw;
   padding: 1.5rem;
   color: var(--letter);
   background-color: var(--primary);
@@ -15,6 +15,10 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.headerTitle {
+  color: var(--letter);
 }
 
 .menu {
@@ -35,8 +39,17 @@
   justify-content: space-between;
 }
 
+.plusIcon {
+  width: 1.2rem;
+  filter: var(--svg);
+}
+
 @media (min-width: 1025px) {
   .menu {
     display: none;
+  }
+
+  .header {
+    width: calc(100vw - 29.6rem);
   }
 }

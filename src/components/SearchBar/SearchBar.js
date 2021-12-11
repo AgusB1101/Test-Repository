@@ -1,8 +1,8 @@
 import './SearchBar.css'
 
-const SearchBar = ({ placeholder }) => {
+const SearchBar = ({ placeholder = '', addClass = '' }) => {
   return (
-    <div className="searchBar">
+    <div className={'searchBar ' + addClass}>
       <input
         className="searchBarInput"
         type="text"

@@ -4,7 +4,12 @@ import './ProductNew.css'
 const ProductNew = ({ handleMenu }) => {
   return (
     <>
-      <Header handleMenu={handleMenu} title="Productos" afterChevron="Nuevo" />
+      <Header
+        handleMenu={handleMenu}
+        title="Productos"
+        afterChevron="Nuevo"
+        backTo="/products"
+      />
     </>
   )
 }

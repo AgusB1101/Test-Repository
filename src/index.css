@@ -7,6 +7,12 @@ html {
   --box: #302f2f;
   --svg: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
     contrast(103%);
+
+  /* overflow-y: scroll; */
+}
+
+.hasScrollBar {
+  padding-right: 2rem;
 }
 
 html[theme='light'] {

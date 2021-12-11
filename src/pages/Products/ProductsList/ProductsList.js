@@ -7,7 +7,7 @@ import './ProductsList.css'
 const ProductsList = ({ handleMenu, products }) => {
   return (
     <Loader>
-      <Header handleMenu={handleMenu} title="Productos" addBtn />
+      <Header handleMenu={handleMenu} title="Productos" searchBar addBtn />
       <Content>
         {products?.map((product) => (
           <ItemBox

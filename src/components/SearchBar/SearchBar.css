@@ -1,0 +1,30 @@
+.searchBar {
+  width: 35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1rem solid var(--letter);
+  border-radius: 1.6rem;
+  padding: 0.8rem;
+  height: 3.2rem;
+  background-color: var(--box);
+}
+
+.searchBarInput {
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: var(--letter);
+}
+
+.searchBarInput::placeholder {
+  color: var(--letter);
+  opacity: 0.5;
+}
+
+.searchBarBtn {
+  width: 2rem;
+  filter: var(--svg);
+  cursor: pointer;
+}

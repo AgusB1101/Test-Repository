@@ -8,6 +8,7 @@
   color: var(--letter);
   background-color: var(--primary);
   position: fixed;
+  z-index: 1;
 }
 
 .haederTitleContainer {
@@ -26,6 +27,12 @@
 .chevron {
   width: 3rem;
   filter: var(--svg);
+}
+
+.rightHeader {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
 }
 
 @media (min-width: 1025px) {

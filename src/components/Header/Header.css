@@ -11,14 +11,16 @@
   z-index: 1;
 }
 
-.haederTitleContainer {
+.headerTitleContainer {
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .headerTitle {
   color: var(--letter);
+  display: block;
 }
 
 .menu {
@@ -34,9 +36,10 @@
 }
 
 .rightHeader {
+  width: 100%;
   display: flex;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .plusIcon {

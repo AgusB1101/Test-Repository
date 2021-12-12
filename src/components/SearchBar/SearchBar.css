@@ -1,11 +1,12 @@
 .searchBar {
-  width: 35rem;
+  width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 0.1rem solid var(--letter);
   border-radius: 1.6rem;
   padding: 0.8rem;
+  padding-right: 0.5rem;
   height: 3.2rem;
   background-color: var(--box);
 }
@@ -17,6 +18,7 @@
   border: none;
   color: var(--letter);
   display: block;
+  padding: 0.1rem 0.2rem;
 }
 
 .searchBarInput::placeholder {
@@ -30,14 +32,44 @@
   cursor: pointer;
 }
 
-.roundInput {
-  border-radius: 5rem;
-  width: 3.2rem;
-  justify-content: center;
+@media (max-width: 1024px) {
+  .searchBar {
+    width: 3.2rem;
+    padding: 0.5rem;
+  }
+
+  .searchBar:hover {
+    width: 100%;
+    padding: 0.8rem;
+    padding-right: 0.5rem;
+    animation: growBar 1s forwards;
+  }
+
+  .searchBarInput {
+    width: 0;
+    padding: 0;
+  }
+
+  .searchBar:hover .searchBarInput {
+    width: 100%;
+    padding: 0.1rem 0.2rem;
+  }
+
+  .searchBarInput:focus .searchBar {
+    width: 100%;
+    height: 20rem;
+    background-color: green;
+  }
+  .searchBar:hover h2 {
+    display: none;
+  }
 }
 
-@media (max-width: 1024px) {
-  .searchBarInput {
-    display: none;
+@keyframes growBar {
+  0% {
+    width: 3.2rem;
+  }
+  100% {
+    width: 100%;
   }
 }

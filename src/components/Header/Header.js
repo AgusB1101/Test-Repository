@@ -31,7 +31,7 @@ const Header = ({
 
   return (
     <header className="header" tabIndex={1}>
-      <div className="haederTitleContainer">
+      <div className="headerTitleContainer">
         <img
           className="menu"
           src="/assets/menu.svg"
@@ -59,7 +59,7 @@ const Header = ({
         {searchBar && (
           <SearchBar
             placeholder={`Buscar ${title.toLowerCase()}`}
-            addClass={width <= 1024 && 'roundInput'}
+            // addClass={width <= 1024 && 'roundInput'}
           />
         )}
 
